@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>3ra Pre-entrega - Comision 49825</title>
+</head>
+
+<body>
+    <div id="formularioContainer">
+        <form id="citasForm">
+            <label for="tipoUsuario">Seleccione el perfil de su cuenta:</label>
+            <select id="tipoUsuario" name="tipoUsuario">
+                <option value="" disabled selected>Seleccione el perfil de su cuenta</option>
+                <option value="dueño">Dueño</option>
+                <option value="groomer">Groomer</option>
+            </select>
+
+            <div id="opcionesDueño" class="opciones" style="display:none;">
+                <label for="accionDueño">Seleccione una opción:</label>
+                <select id="accionDueño" name="accionDueño">
+                    <option value="buscarMascota">Buscar citas por nombre de mascota</option>
+                    <option value="buscarDueño">Buscar citas por nombre del dueño</option>
+                    <option value="agregarUsuario">Agregar un nuevo usuario</option>
+                </select>
+
+                <input type="text" id="nuevoDueño" name="nuevoDueño" placeholder="Nombre del dueño">
+                <input type="text" id="nuevaMascota" name="nuevaMascota" placeholder="Nombre de la mascota">
+            </div>
+
+            <div id="opcionesGroomer" class="opciones" style="display:none;">
+                <label for="accionGroomer">Seleccione una opción:</label>
+                <select id="accionGroomer" name="accionGroomer">
+                    <option value="mostrarTodas">Mostrar todas las citas</option>
+                    <option value="buscarMascotaGroomer">Buscar citas por nombre de mascota</option>
+                </select>
+
+                <input type="text" id="mascotaABuscarGroomer" name="mascotaABuscarGroomer"
+                    placeholder="Nombre de la mascota">
+            </div>
+
+            <button type="button" id="enviarBtn">Enviar</button>
+        </form>
+
+        <div class="containerD">
+            <div class="animdog">
+                <div class="bodydog"></div>
+                <div class="leg1"></div>
+                <div class="leg2"></div>
+                <div class="leg3"></div>
+                <div class="leg4"></div>
+                <div class="tail"></div>
+                <div class="ear"></div>
+                <div class="nose"></div>
+                <div class="eye"></div>
+                <div class="tongue"></div>
+            </div>
+        </div>
+
+        <!-- Agrega el elemento mensajeContainer -->
+        <div id="mensajeContainer"></div>
+    </div>
+    <h3>Grooming Sala - Lista de Pautas</h3>
+    <div id="citasContainer"></div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
